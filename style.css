@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.calculator {
+  width: 340px;
+  padding: 30px 20px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  height: 600px; /* 전체 높이 증가 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#display {
+  width: 100%;
+  height: 90px; /* 출력창 더 큼 */
+  font-size: 36px;
+  text-align: right;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background: #f9f9f9;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+button {
+  font-size: 22px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* 숫자: 동그라미 */
+.circle {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #eeeeee;
+}
+
+/* 사칙연산자: 네모 */
+.square {
+  height: 60px;
+  width: 60px;
+  border-radius: 8px;
+  background-color: #3bb6ef;
+  color: white;
+}
+
+/* 기타 연산자: 오벌 */
+.oval {
+  height: 60px;
+  width: 100%;
+  border-radius: 30px;
+  background-color: #f0a740;
+  color: white;
+}
+
+/* = 연산자는 길게 */
+.equal {
+  grid-column: span 2;
+  background-color: #6ae13e;
+}
+
+button:hover {
+  filter: brightness(0.95);
+}
